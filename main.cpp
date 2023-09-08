@@ -126,16 +126,14 @@ int main()
 {
     cin.sync_with_stdio(0);
     cin.tie(0);
-    cout.tie(0);
     
-    int N;
     string a, b, c;
-    cin >> N;
-    for(int i=0;i<N;i++){
-        cin >> a >> b;
+    cin >> a >> b;
+    if(a.length() < b.length()){
+        cout << compute(b, a) << '\n';
+    }else{
         cout << compute(a, b) << '\n';
     }
 
     return 0;
 }
-
